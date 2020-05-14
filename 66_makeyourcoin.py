@@ -207,7 +207,13 @@ class Two_Pound(Coin):
         super().__init__(**data)
 
 
-   
+coins = [One_Pence(), Two_Pence(), Five_Pence(), Ten_Pence(), Twenty_Pence(), Fifty_Pence(), One_Pound(), Two_Pound()]
+
+for coin in coins:
+    arguments = [coin, coin.value, coin.colour, coin.num_edges, coin.diameter, coin.thickness, coin.mass]
+
+    string = "{} - Value:{}, colour: {}, number of edges:{}, diameter(mm):{}, thickness:{}, mass(g):{}".format(*arguments)
+    print(string)
 
 
 
